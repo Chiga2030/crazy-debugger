@@ -78,7 +78,7 @@ gulp.task('copy-fonts', () => {
   gulp.src(`${path.src.fonts}*.css`)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
     }))
     .pipe(concat('fonts.css'))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano({
