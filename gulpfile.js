@@ -43,24 +43,22 @@ gulp.task('clean', () => del(path.clean));
 
 /* сборка html */
 gulp.task('build-html', () => {
-    gulp.src(path.src.indexHtml)
-        .pipe(rigger())
-        .pipe(gulp.dest(path.build.html));
+  gulp.src(path.src.indexHtml)
+    .pipe(rigger())
+    .pipe(gulp.dest(path.build.html));
 });
-
 
 /* сборка стилей в один файл style-min.css */
 gulp.task('build-styles', () => {
-  
-    gulp.src(path.src.style)
-      .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
-      .pipe(autoprefixer({
-        cascade: false
-      }))
-      .pipe(concat('style-min.css'))
-      .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
-      .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
-      .pipe(gulp.dest(path.build.style));
+  gulp.src(path.src.style)
+    .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(concat('style-min.css'))
+    .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
+    .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
+    .pipe(gulp.dest(path.build.style));
 });
 
 /* сборка шрифтов */
@@ -68,9 +66,9 @@ gulp.task('build-fonts', () => {
   gulp.src(path.src.fonts + '*.ttf')
     .pipe(ttf2woff())
     .pipe(gulp.dest(path.src.fonts));
-    return gulp.src(path.src.fonts + '*.ttf')
-      .pipe(ttf2woff2())
-      .pipe(gulp.dest(path.src.fonts));
+  return gulp.src(path.src.fonts + '*.ttf')
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest(path.src.fonts));
 });
 
 gulp.task('copy-fonts', () => {
@@ -84,8 +82,8 @@ gulp.task('copy-fonts', () => {
     }))
     .pipe(concat('fonts.css'))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano({
-       minifyFontValues: false,
-       discardUnused: false
+      minifyFontValues: false,
+      discardUnused: false,
      })))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
     .pipe(gulp.dest(path.build.fonts));
@@ -96,40 +94,83 @@ gulp.task('build-scripts', () => {
   gulp.src(path.src.script)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(concat('scripts-min.js'))
-      .pipe(gulpif(process.env.BABEL === 'switch-on', babel({
-        presets: ['@babel/env']
-      })))
-      .pipe(gulpif(process.env.PRODUCTION === 'switch-on', uglify()))
-      .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
+    .pipe(gulpif(process.env.BABEL === 'switch-on', babel({
+      presets: [
+        '@babel/env',
+      ],
+    })))
+    .pipe(gulpif(process.env.PRODUCTION === 'switch-on', uglify()))
+    .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
     .pipe(gulp.dest(path.build.script));
 });
 
 // compress images
 gulp.task('build-images', () => {
   gulp.src(path.src.img)
-  .pipe(imagemin())
-  .pipe(gulp.dest(path.build.img))
+    .pipe(imagemin())
+    .pipe(gulp.dest(path.build.img));
 });
 
-gulp.task('default', ['build-fonts', 'copy-fonts', 'build-html', 'build-styles', 'build-scripts', 'build-images', 'browser-sync']);
-gulp.task('build', ['clean', 'build-fonts', 'copy-fonts', 'build-html', 'build-styles', 'build-scripts', 'build-images']);  //build for prod
+gulp.task(
+  'default', [
+    'build-fonts',
+    'copy-fonts',
+    'build-html',
+    'build-styles',
+    'build-scripts',
+    'build-images',
+    'browser-sync',
+  ]);
+
+// build for prod
+gulp.task(
+  'build', [
+    'clean',
+    'build-fonts',
+    'copy-fonts',
+    'build-html',
+    'build-styles',
+    'build-scripts',
+    'build-images',
+  ]);
 
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: "./build/",
+      baseDir: './build/',
     },
     port: 3006,
   });
-  gulp.watch(path.src.fonts, ['watch-fonts']);
-  gulp.watch(path.src.html, ['watch-html']);
-  gulp.watch(path.src.style, ['watch-styles']);
-  gulp.watch(path.src.script, ['watch-scripts']);
-  gulp.watch(path.src.img, ['watch-images']);
+  gulp.watch(path.src.fonts, [
+    'watch-fonts',
+  ]);
+  gulp.watch(path.src.html, [
+    'watch-html',
+  ]);
+  gulp.watch(path.src.style, [
+    'watch-styles',
+  ]);
+  gulp.watch(path.src.script, [
+    'watch-scripts',
+  ]);
+  gulp.watch(path.src.img, [
+    'watch-images',
+  ]);
 });
 
-gulp.task('watch-fonts', ['build-fonts', 'copy-fonts'], () => browserSync.reload());
-gulp.task('watch-html', ['build-html'], () => browserSync.reload());
-gulp.task('watch-styles', ['build-styles'], () => browserSync.reload());
-gulp.task('watch-scripts', ['build-scripts'], () => browserSync.reload());
-gulp.task('watch-images', ['build-images'], () => browserSync.reload());
+gulp.task('watch-fonts', [
+  'build-fonts',
+  'copy-fonts',
+], () => browserSync.reload());
+gulp.task('watch-html', [
+  'build-html',
+], () => browserSync.reload());
+gulp.task('watch-styles', [
+  'build-styles',
+], () => browserSync.reload());
+gulp.task('watch-scripts', [
+  'build-scripts',
+], () => browserSync.reload());
+gulp.task('watch-images', [
+  'build-images',
+], () => browserSync.reload());
