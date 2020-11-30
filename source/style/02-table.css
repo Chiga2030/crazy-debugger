@@ -1,0 +1,4 @@
+.body {
+	background: repeat center/cover url('../img/background.jpg');
+	height: 100vh;
+}
