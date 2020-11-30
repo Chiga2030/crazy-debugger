@@ -1,0 +1,46 @@
+{
+  "name": "crazy-debugger",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "description": "Crazy debugger game by JavaScript",
+  "main": "./build/index.html",
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chiga2030/crazy-debugger.git"
+  },
+  "author": "Anton Tkachuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chiga2030/crazy-debugger/issues"
+  },
+  "homepage": "https://github.com/Chiga2030/crazy-debugger#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "browser-sync": "^2.26.7",
+    "del": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-env": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "js-yaml": "^3.14.0",
+    "lodash.template": ">=4.5.0"
+  },
+  "dependencies": {
+  }
+}
