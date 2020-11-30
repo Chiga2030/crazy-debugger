@@ -1,0 +1,13 @@
+.select-level__choise-of-difficulty {
+  list-style: none;
+  margin-left: 3.12em;
+}
+
+.choise-of-difficulty__select {
+  font: normal normal 700 3.12em "roboto";
+  margin-bottom: .75em;
+}
+
+.choise-of-difficulty__select:hover {
+  list-style-image: url('../img/rhombus.svg');
+}

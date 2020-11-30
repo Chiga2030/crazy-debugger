@@ -1,0 +1,9 @@
+.select-level {
+  border: solid red 1px;
+  height: 80vh;
+  width: 80vw;
+}
+
+.select-level__header {
+  margin-bottom: 3.75em;
+}

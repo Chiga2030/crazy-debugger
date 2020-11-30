@@ -1,0 +1,7 @@
+.select-level__subtitle {
+  font: normal normal 400 1.18em "roboto";
+}
+
+.select-level__subtitle_bold {
+  font-weight: 700;
+}
