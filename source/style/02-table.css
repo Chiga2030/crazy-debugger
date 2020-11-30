@@ -1,4 +1,8 @@
 .body {
+	align-items: center;
 	background: repeat center/cover url('../img/background.jpg');
+  color: #FFF;
+	display: flex;
 	height: 100vh;
+	justify-content: space-around;
 }
