@@ -33,7 +33,7 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const imagemin = require('gulp-imagemin');  // compress images
 const autoprefixer = require('gulp-autoprefixer');
 
-env ({
+env({
   file: '.env',
   type: 'ini',
 });
@@ -53,7 +53,7 @@ gulp.task('build-styles', () => {
   gulp.src(path.src.style)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
     }))
     .pipe(concat('style-min.css'))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
@@ -63,19 +63,19 @@ gulp.task('build-styles', () => {
 
 /* сборка шрифтов */
 gulp.task('build-fonts', () => {
-  gulp.src(path.src.fonts + '*.ttf')
+  gulp.src(`${path.src.fonts}*.ttf`)
     .pipe(ttf2woff())
     .pipe(gulp.dest(path.src.fonts));
-  return gulp.src(path.src.fonts + '*.ttf')
+  return gulp.src(`${path.src.fonts}*.ttf`)
     .pipe(ttf2woff2())
     .pipe(gulp.dest(path.src.fonts));
 });
 
 gulp.task('copy-fonts', () => {
-  gulp.src(path.src.fonts + '*.*[^".css"]')
+  gulp.src(`${path.src.fonts}*.*[^".css"]`)
     .pipe(gulp.dest(path.build.fonts));
 
-  gulp.src(path.src.fonts + '*.css')
+  gulp.src(`${path.src.fonts}*.css`)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(autoprefixer({
       cascade: false
@@ -84,7 +84,7 @@ gulp.task('copy-fonts', () => {
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano({
       minifyFontValues: false,
       discardUnused: false,
-     })))
+    })))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
     .pipe(gulp.dest(path.build.fonts));
 });
