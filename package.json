@@ -41,6 +41,5 @@
     "js-yaml": "^3.14.0",
     "lodash.template": ">=4.5.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
