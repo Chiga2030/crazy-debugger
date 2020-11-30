@@ -43,24 +43,22 @@ gulp.task('clean', () => del(path.clean));
 
 /* сборка html */
 gulp.task('build-html', () => {
-    gulp.src(path.src.indexHtml)
-        .pipe(rigger())
-        .pipe(gulp.dest(path.build.html));
+  gulp.src(path.src.indexHtml)
+    .pipe(rigger())
+    .pipe(gulp.dest(path.build.html));
 });
-
 
 /* сборка стилей в один файл style-min.css */
 gulp.task('build-styles', () => {
-  
-    gulp.src(path.src.style)
-      .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
-      .pipe(autoprefixer({
-        cascade: false
-      }))
-      .pipe(concat('style-min.css'))
-      .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
-      .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
-      .pipe(gulp.dest(path.build.style));
+  gulp.src(path.src.style)
+    .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
+    .pipe(concat('style-min.css'))
+    .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
+    .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
+    .pipe(gulp.dest(path.build.style));
 });
 
 /* сборка шрифтов */
