@@ -95,7 +95,7 @@ gulp.task('build-scripts', () => {
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(concat('scripts-min.js'))
     .pipe(gulpif(process.env.BABEL === 'switch-on', babel({
-      presets: ['@babel/env',]
+      presets: ['@babel/env', ],
     })))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', uglify()))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
@@ -139,15 +139,15 @@ gulp.task('browser-sync', () => {
     },
     port: 3006,
   });
-  gulp.watch(path.src.fonts, ['watch-fonts',]);
-  gulp.watch(path.src.html, ['watch-html',]);
-  gulp.watch(path.src.style, ['watch-styles',]);
-  gulp.watch(path.src.script, ['watch-scripts',]);
-  gulp.watch(path.src.img, ['watch-images',]);
+  gulp.watch(path.src.fonts, ['watch-fonts', ]);
+  gulp.watch(path.src.html, ['watch-html', ]);
+  gulp.watch(path.src.style, ['watch-styles', ]);
+  gulp.watch(path.src.script, ['watch-scripts', ]);
+  gulp.watch(path.src.img, ['watch-images', ]);
 });
 
-gulp.task('watch-fonts', ['build-fonts', 'copy-fonts',], () => browserSync.reload());
-gulp.task('watch-html', ['build-html',], () => browserSync.reload());
-gulp.task('watch-styles', ['build-styles',], () => browserSync.reload());
-gulp.task('watch-scripts', ['build-scripts',], () => browserSync.reload());
-gulp.task('watch-images', ['build-images',], () => browserSync.reload());
+gulp.task('watch-fonts', ['build-fonts', 'copy-fonts', ], () => browserSync.reload());
+gulp.task('watch-html', ['build-html', ], () => browserSync.reload());
+gulp.task('watch-styles', ['build-styles', ], () => browserSync.reload());
+gulp.task('watch-scripts', ['build-scripts', ], () => browserSync.reload());
+gulp.task('watch-images', ['build-images', ], () => browserSync.reload());
