@@ -82,8 +82,8 @@ gulp.task('copy-fonts', () => {
     }))
     .pipe(concat('fonts.css'))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano({
-       minifyFontValues: false,
-       discardUnused: false,
+      minifyFontValues: false,
+      discardUnused: false,
      })))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
     .pipe(gulp.dest(path.build.fonts));
@@ -95,7 +95,7 @@ gulp.task('build-scripts', () => {
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(concat('scripts-min.js'))
     .pipe(gulpif(process.env.BABEL === 'switch-on', babel({
-      presets: ['@babel/env']
+      presets: ['@babel/env'],
     })))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', uglify()))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
@@ -105,17 +105,37 @@ gulp.task('build-scripts', () => {
 // compress images
 gulp.task('build-images', () => {
   gulp.src(path.src.img)
-  .pipe(imagemin())
-  .pipe(gulp.dest(path.build.img))
+    .pipe(imagemin())
+    .pipe(gulp.dest(path.build.img));
 });
 
-gulp.task('default', ['build-fonts', 'copy-fonts', 'build-html', 'build-styles', 'build-scripts', 'build-images', 'browser-sync']);
-gulp.task('build', ['clean', 'build-fonts', 'copy-fonts', 'build-html', 'build-styles', 'build-scripts', 'build-images']);  //build for prod
+gulp.task(
+  'default', [
+    'build-fonts',
+    'copy-fonts',
+    'build-html',
+    'build-styles',
+    'build-scripts',
+    'build-images',
+    'browser-sync',
+  ]);
+
+// build for prod
+gulp.task(
+  'build', [
+    'clean',
+    'build-fonts',
+    'copy-fonts',
+    'build-html',
+    'build-styles',
+    'build-scripts',
+    'build-images',
+  ]);
 
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: "./build/",
+      baseDir: './build/',
     },
     port: 3006,
   });
