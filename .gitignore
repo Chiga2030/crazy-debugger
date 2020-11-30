@@ -1,0 +1,8 @@
+upload.sh
+.DS_Store
+.cache/
+dist/
+node_modules/
+mockups-and-other/
+pixel-perfect/
+build
