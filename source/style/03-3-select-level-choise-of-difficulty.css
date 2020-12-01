@@ -14,9 +14,7 @@
   margin-left: 1em;
 }
 
-.choise-of-difficulty__select >
-.choise-of-difficulty__radio:checked +
-.choise-of-difficulty__description::before {
+.choise-of-difficulty__select > .choise-of-difficulty__radio:checked + .choise-of-difficulty__description::before {
   background: no-repeat center/contain url('../img/rhombus.svg');
   content: '';
   height: 1em;
