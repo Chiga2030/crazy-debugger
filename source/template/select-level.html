@@ -3,14 +3,34 @@
   <header class="select-level__header">
     <h1 class="select-level__title">Выберите уровень сложности:</h1>
     <p class="select-level__subtitle">
-      <span class="select-level__subtitle_bold">Выберите сложность и игра начнется.</span>
+      <span class="select-level__subtitle_bold">
+        Выберите сложность и игра начнется.
+      </span>
       Чем выше уровень - тем больше будет выборка карт.</p>
   </header>
 
-  <ul class="select-level__choise-of-difficulty choise-of-difficulty">
-    <li class="choise-of-difficulty__select">&nbsp;Простой</li>
-    <li class="choise-of-difficulty__select">&nbsp;Средний</li>
-    <li class="choise-of-difficulty__select">&nbsp;Сложный</li>
-  </ul>
+  <form class="select-level__choise-of-difficulty choise-of-difficulty">
+    <label class="choise-of-difficulty__select">
+      <input checked hidden class="choise-of-difficulty__radio" type="radio" name="select">
+      <span class="choise-of-difficulty__description">
+        Простой
+      </span>
+    </label>
+    <label class="choise-of-difficulty__select">
+      <input hidden class="choise-of-difficulty__radio" type="radio" name="select">
+      <span class="choise-of-difficulty__description">
+        Средний
+      </span>
+    </label>
+    <label class="choise-of-difficulty__select">
+      <input hidden class="choise-of-difficulty__radio" type="radio" name="select">
+      <span class="choise-of-difficulty__description">
+        Сложный
+      </span>
+    </label>
+  </form>
 
+  <button class="select-level__start-button" type="button">
+    Начать игру
+  </button>
 </section>

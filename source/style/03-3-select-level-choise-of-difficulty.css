@@ -1,13 +1,26 @@
-.select-level__choise-of-difficulty {
-  list-style: none;
-  margin-left: 3.12em;
+.choise-of-difficulty {
+  display: inline-block;
+  position: relative;
 }
 
 .choise-of-difficulty__select {
+  cursor: pointer;
+  display: block;
   font: normal normal 700 3.12em "roboto", sans-serif;
   margin-bottom: .75em;
 }
 
-.choise-of-difficulty__select:hover {
-  list-style-image: url('../img/rhombus.svg');
+.choise-of-difficulty__description {
+  margin-left: 1em;
+}
+
+.choise-of-difficulty__select > 
+.choise-of-difficulty__radio:checked + 
+.choise-of-difficulty__description::before {
+  background: no-repeat center/contain url('../img/rhombus.svg');
+  content: '';
+  height: 1em;
+  left: 0;
+  position: absolute;
+  width: .5em;
 }
