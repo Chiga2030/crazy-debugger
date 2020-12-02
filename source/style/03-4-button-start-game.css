@@ -10,3 +10,13 @@
   outline: none;
   width: 11em;
 }
+
+.select-level__start-button:hover {
+  cursor: pointer;
+}
+
+.select-level__start-button:active {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+}
