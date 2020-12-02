@@ -1,3 +1,7 @@
+.select-level__choise-of-difficulty {
+  margin-bottom: 7em;
+}
+
 .choise-of-difficulty {
   display: inline-block;
   position: relative;
@@ -7,6 +11,9 @@
   cursor: pointer;
   display: block;
   font: normal normal 700 3.12em "roboto", sans-serif;
+}
+
+.choise-of-difficulty__select:not(:last-child) {
   margin-bottom: .75em;
 }
 
