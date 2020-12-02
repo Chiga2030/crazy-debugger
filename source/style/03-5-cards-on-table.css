@@ -5,8 +5,7 @@
 }
 
 .cards-on-table__card-left {
-  animation-duration: 2s;
-  animation-name: slide-card-left;
+  animation: slide-card-left .8s ease-out;
   bottom: 4em;
   position: absolute;
   right: 18.75em;
@@ -14,8 +13,7 @@
 }
 
 .cards-on-table__card-right {
-  animation-duration: 2s;
-  animation-name: slide-card-right;
+  animation: slide-card-right 1s ease-out;
   bottom: 2em;
   position: absolute;
   right: 9em;
