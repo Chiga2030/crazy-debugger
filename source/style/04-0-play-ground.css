@@ -1,4 +1,6 @@
 .play-ground_easy {
+  /*height: 80vh;*/
+  /*width: 80vw;*/
   align-items: center;
   border: 1px solid red;
   display: flex;

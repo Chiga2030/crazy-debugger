@@ -1,4 +1,40 @@
 .play-ground__card {
+  border-radius: 8px;
   cursor: pointer;
   margin: 1.5em;
+}
+
+.play-ground__card:hover {
+  animation: pre-flip-card 1s ease-out forwards;
+}
+
+.play-ground__card:not(:hover) {
+  animation: pre-flip-card-reverse .5s ease-out forwards;
+}
+
+@keyframes pre-flip-card {
+  25% {
+    box-shadow: 16px 16px 8px #0000007f;
+  }
+
+  50% {
+    box-shadow: 16px 16px 8px #0000007f;
+    transform: translate(-.5em, -1.5em) rotate(-2deg);
+  }
+
+  100% {
+    box-shadow: 16px 16px 8px #0000007f;
+    transform: translate(-.5em, -1.5em) rotate(-3deg);
+  }
+}
+
+@keyframes pre-flip-card-reverse {
+  0% {
+    box-shadow: 16px 16px 8px #0000007f;
+    transform: translate(-.5em, -1.5em) rotate(-3deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
 }
