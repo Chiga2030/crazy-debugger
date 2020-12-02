@@ -1,0 +1,49 @@
+.cards-on-table {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.cards-on-table__card-left {
+  animation-duration: 2s;
+  animation-name: slide-card-left;
+  bottom: 4em;
+  position: absolute;
+  right: 18.75em;
+  transform: rotate(12deg);
+}
+
+.cards-on-table__card-right {
+  animation-duration: 2s;
+  animation-name: slide-card-right;
+  bottom: 2em;
+  position: absolute;
+  right: 9em;
+  transform: rotate(40deg);
+}
+
+@keyframes slide-card-left {
+  from {
+    bottom: 0;
+    right: 20em;
+    transform: rotate(0deg);
+  }
+
+  to {
+    right: 18.75em;
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes slide-card-right {
+  from {
+    bottom: 0;
+    right: 20em;
+    transform: rotate(0deg);
+  }
+
+  to {
+    right: 9em;
+    transform: rotate(40deg);
+  }
+}
