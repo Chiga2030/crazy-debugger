@@ -1,0 +1,15 @@
+.play-ground_easy {
+  align-items: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.play-ground_normal {
+  flex-wrap: wrap;
+}
+
+.play-ground_hard {
+
+}
