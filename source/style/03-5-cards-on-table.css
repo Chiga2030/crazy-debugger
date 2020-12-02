@@ -26,7 +26,7 @@
   from {
     bottom: 0;
     right: 20em;
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 
   to {
@@ -39,7 +39,7 @@
   from {
     bottom: 0;
     right: 20em;
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 
   to {
