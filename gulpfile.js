@@ -52,9 +52,9 @@ gulp.task('build-html', () => {
 gulp.task('build-styles', () => {
   gulp.src(path.src.style)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
-    .pipe(autoprefixer({
+    .pipe(gulpif(process.env.PRODUCTION === 'switch-on', autoprefixer({
       cascade: false,
-    }))
+    })))
     .pipe(concat('style-min.css'))
     .pipe(gulpif(process.env.PRODUCTION === 'switch-on', cssnano()))
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.write()))
