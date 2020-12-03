@@ -1,17 +1,25 @@
 .play-ground_easy {
-  /*height: 80vh;*/
-  /*width: 80vw;*/
   align-items: center;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   position: relative;
+
+  display: none;
 }
 
 .play-ground_normal {
   flex-wrap: wrap;
+  justify-content: center;
+
+  display: none;
 }
 
 .play-ground_hard {
+  border: 1px solid red;
+  
+  display: none;
+}
 
+.play-ground__wrapper-line {
+  display: flex;
 }

@@ -7,8 +7,10 @@
 .cards-on-table__card {
   border-radius: 8px;
   bottom: 0;
+  height: var(--card-height);
   position: absolute;
   right: 18.75em;
+  width: var(--card-width);
 }
 
 .cards-on-table__card_left {

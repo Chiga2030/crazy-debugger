@@ -1,7 +1,10 @@
 .play-ground__card {
+  background: no-repeat center/contain url(../img/card-cover.jpg);
   border-radius: 8px;
   cursor: pointer;
+  height: var(--card-height);
   margin: 1.5em;
+  width: var(--card-width);
 }
 
 .play-ground__card:hover {
