@@ -1,10 +1,39 @@
-.play-ground__card {
-  background: no-repeat center/contain url(../img/card-cover.jpg);
+.play-ground__flip-card {
+  height: var(--card-height);
+  margin: 1.5em;
+  perspective: 1000px; 
+  width: var(--card-width);
+}
+
+.play-ground__flip-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.play-ground__card ,
+.play-ground__card_backside {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   border-radius: 8px;
   cursor: pointer;
   height: var(--card-height);
-  margin: 1.5em;
+  position: absolute;
   width: var(--card-width);
+}
+
+.play-ground__card {
+  background: no-repeat center/contain url(../img/card-cover.jpg);
+}
+
+.play-ground__card_backside {
+  background: no-repeat center/contain url(../img/card-cover-backside.jpg);
+  box-shadow: 16px 16px 8px #0000007f;
+  transform: rotateY(180deg);
+}
+
+.play-ground__flip-card-inner:active {
+  transform: rotateY(-180deg);
 }
 
 .play-ground__card:hover {
