@@ -4,44 +4,39 @@
   right: 0;
 }
 
-.cards-on-table__card-left {
-  animation: slide-card-left .8s ease-out;
-  bottom: 4em;
+.cards-on-table__card {
+  border-radius: 8px;
+  bottom: 0;
   position: absolute;
   right: 18.75em;
+}
+
+.cards-on-table__card_left {
+  animation: slide-left-card .8s ease-out forwards;
   transform: rotate(12deg);
 }
 
-.cards-on-table__card-right {
-  animation: slide-card-right 1s ease-out;
-  bottom: 2em;
-  position: absolute;
-  right: 9em;
+.cards-on-table__card_right {
+  animation: slide-right-card 1s ease-out forwards;
   transform: rotate(40deg);
 }
 
-@keyframes slide-card-left {
+@keyframes slide-left-card {
   from {
-    bottom: 0;
-    right: 20em;
     transform: rotate(0);
   }
 
   to {
-    right: 18.75em;
-    transform: rotate(12deg);
+    transform: translateY(-4em) rotate(12deg);
   }
 }
 
-@keyframes slide-card-right {
+@keyframes slide-right-card {
   from {
-    bottom: 0;
-    right: 20em;
     transform: rotate(0);
   }
 
   to {
-    right: 9em;
-    transform: rotate(40deg);
+    transform: translate(9em, -2em) rotate(40deg);
   }
 }
