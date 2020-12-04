@@ -1,4 +1,5 @@
 :root {
-  --card-width: 13.625em;
   --card-height: 21.3125em;
+  --card-shadow: 16px 16px 8px #0000007f;
+  --card-width: 13.625em;
 }
