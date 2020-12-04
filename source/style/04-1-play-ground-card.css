@@ -8,7 +8,7 @@
   width: var(--card-width);
 }
 
-.play-ground__flip-card-inner {
+.play-ground__flip-card-wrapper {
   position: relative;
   transform-style: preserve-3d;
   transition:
@@ -16,8 +16,8 @@
     box-shadow .5s;
 }
 
-.play-ground__card,
-.play-ground__card_backside {
+.play-ground__card-frontside,
+.play-ground__card-backside {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 8px;
@@ -27,14 +27,14 @@
   width: var(--card-width);
 }
 
-.play-ground__card {
+.play-ground__card-frontside {
   background: no-repeat center/contain url(../img/card-cover.jpg);
   transition:
     transform .5s .5s,
     box-shadow .5s;
 }
 
-.play-ground__card_backside {
+.play-ground__card-backside {
   background: no-repeat center/contain url(../img/card-cover-backside.jpg);
   box-shadow: var(--card-shadow);
   transform: rotateY(180deg);
@@ -44,12 +44,12 @@
   transform: translate(-.5em, -1.5em);
 }
 
-.play-ground__card:hover {
+.play-ground__card-frontside:hover {
   box-shadow: var(--card-shadow);
   transform: rotate(-3deg);
 }
 
-.play-ground__flip-card-inner:active {
+.play-ground__flip-card-wrapper:active {
   box-shadow: var(--card-shadow);
   transform: rotateY(-180deg);
 }

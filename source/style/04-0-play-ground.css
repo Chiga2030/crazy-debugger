@@ -1,10 +1,9 @@
 .play-ground_easy {
   align-items: center;
-  display: flex;
   justify-content: center;
   position: relative;
 
-  display: none;
+  /*display: none;*/
 }
 
 .play-ground_normal {
@@ -15,13 +14,9 @@
 }
 
 .play-ground_hard {
-  border: 1px solid red;
-  
   display: none;
 }
 
 .play-ground__wrapper-line {
   display: flex;
-
-  /*display: none;*/
 }
