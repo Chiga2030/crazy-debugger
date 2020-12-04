@@ -35,9 +35,16 @@
 }
 
 .play-ground__card-backside {
-  background: no-repeat center/contain url(../img/card-cover-backside.jpg);
   box-shadow: var(--card-shadow);
   transform: rotateY(180deg);
+}
+
+.play-ground__card-backside_bug {
+  background: no-repeat center/contain url(../img/card-cover-backside-bug.jpg);
+}
+
+.play-ground__card-backside_game-over {
+  background: no-repeat center/contain url(../img/card-cover-backside-game-over.jpg);
 }
 
 .play-ground__flip-card:hover {
