@@ -66,6 +66,10 @@
     transform: translate(-.5em, -1.5em) rotate(-3deg);
   }
 
+  50% {
+    transform: translate(-.5em, -.5em) rotate(-3deg);
+  }
+
   100% {
     transform: translate(0, 0) rotate(0);
   }
