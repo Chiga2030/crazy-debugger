@@ -1,7 +1,7 @@
 .play-ground__flip-card {
   height: var(--card-height);
   margin: 1.5em;
-  perspective: 1000px; 
+  perspective: 1000px;
   transition:
     transform .5s,
     box-shadow .5s;
