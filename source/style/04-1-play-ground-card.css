@@ -2,17 +2,21 @@
   height: var(--card-height);
   margin: 1.5em;
   perspective: 1000px; 
-  transition: transform .5s, box-shadow .5s;
+  transition:
+    transform .5s,
+    box-shadow .5s;
   width: var(--card-width);
 }
 
 .play-ground__flip-card-inner {
   position: relative;
   transform-style: preserve-3d;
-  transition: transform .5s, box-shadow .5s;
+  transition:
+    transform .5s,
+    box-shadow .5s;
 }
 
-.play-ground__card ,
+.play-ground__card,
 .play-ground__card_backside {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -25,12 +29,14 @@
 
 .play-ground__card {
   background: no-repeat center/contain url(../img/card-cover.jpg);
-  transition: transform .5s .5s, box-shadow .5s;
+  transition:
+    transform .5s .5s,
+    box-shadow .5s;
 }
 
 .play-ground__card_backside {
   background: no-repeat center/contain url(../img/card-cover-backside.jpg);
-  box-shadow: 16px 16px 8px #0000007f;
+  box-shadow: var(--card-shadow);
   transform: rotateY(180deg);
 }
 
@@ -39,12 +45,11 @@
 }
 
 .play-ground__card:hover {
-  box-shadow: 16px 16px 8px #0000007f;
+  box-shadow: var(--card-shadow);
   transform: rotate(-3deg);
 }
 
-.play-ground__flip-card-inner:active  {
+.play-ground__flip-card-inner:active {
+  box-shadow: var(--card-shadow);
   transform: rotateY(-180deg);
-  box-shadow: 16px 16px 8px #0000007f;
-
 }
