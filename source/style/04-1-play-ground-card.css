@@ -2,13 +2,14 @@
   height: var(--card-height);
   margin: 1.5em;
   perspective: 1000px; 
+  transition: transform .5s, box-shadow .5s;
   width: var(--card-width);
 }
 
 .play-ground__flip-card-inner {
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transition: transform .5s, box-shadow .5s;
 }
 
 .play-ground__card ,
@@ -24,6 +25,7 @@
 
 .play-ground__card {
   background: no-repeat center/contain url(../img/card-cover.jpg);
+  transition: transform .5s .5s, box-shadow .5s;
 }
 
 .play-ground__card_backside {
@@ -32,45 +34,17 @@
   transform: rotateY(180deg);
 }
 
-.play-ground__flip-card-inner:active {
-  transform: translateY(-2em) rotateY(-180deg);
+.play-ground__flip-card:hover {
+  transform: translate(-.5em, -1.5em);
 }
 
 .play-ground__card:hover {
-  animation: pre-flip-card 1s ease-out forwards;
+  box-shadow: 16px 16px 8px #0000007f;
+  transform: rotate(-3deg);
 }
 
-.play-ground__card:not(:hover) {
-  animation: pre-flip-card-reverse .5s ease-out forwards;
-}
+.play-ground__flip-card-inner:active  {
+  transform: rotateY(-180deg);
+  box-shadow: 16px 16px 8px #0000007f;
 
-@keyframes pre-flip-card {
-  25% {
-    box-shadow: 16px 16px 8px #0000007f;
-  }
-
-  50% {
-    box-shadow: 16px 16px 8px #0000007f;
-    transform: translate(-.5em, -1.5em) rotate(-2deg);
-  }
-
-  100% {
-    box-shadow: 16px 16px 8px #0000007f;
-    transform: translate(-.5em, -1.5em) rotate(-3deg);
-  }
-}
-
-@keyframes pre-flip-card-reverse {
-  0% {
-    box-shadow: 16px 16px 8px #0000007f;
-    transform: translate(-.5em, -1.5em) rotate(-3deg);
-  }
-
-  50% {
-    transform: translate(-.5em, -.5em) rotate(-3deg);
-  }
-
-  100% {
-    transform: translate(0, 0) rotate(0);
-  }
 }
