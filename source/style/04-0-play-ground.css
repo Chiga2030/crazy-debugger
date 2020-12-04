@@ -4,7 +4,7 @@
   justify-content: center;
   position: relative;
 
-  /*display: none;*/
+  display: none;
 }
 
 .play-ground_normal {
@@ -22,4 +22,6 @@
 
 .play-ground__wrapper-line {
   display: flex;
+
+  /*display: none;*/
 }

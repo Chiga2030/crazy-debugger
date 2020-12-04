@@ -19,13 +19,29 @@
 
 .choise-of-difficulty__description {
   margin-left: 1em;
+  transition: text-shadow .2s;
+}
+
+.choise-of-difficulty__description:hover {
+  text-shadow: var(--shadow-hover);
 }
 
 .choise-of-difficulty__select > .choise-of-difficulty__radio:checked + .choise-of-difficulty__description::before {
+  animation: rhombus-flip 1s linear infinite both;
   background: no-repeat center/contain url('../img/rhombus.svg');
   content: '';
   height: 1em;
   left: 0;
   position: absolute;
   width: .5em;
+}
+
+@keyframes rhombus-flip {
+  from​‌​ {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
 }

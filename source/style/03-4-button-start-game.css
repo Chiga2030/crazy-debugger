@@ -1,4 +1,5 @@
 .select-level__start-button {
+  transition: text-shadow .2s, transition .2s;
   background: #d62b2e;
   border-radius: 8px;
   border: none;
@@ -12,11 +13,13 @@
 }
 
 .select-level__start-button:hover {
+  box-shadow: 0 4px 3px #0000007f;
   cursor: pointer;
+  transform: translateY(-2px);
 }
 
 .select-level__start-button:active {
   box-shadow: none;
   position: relative;
-  top: 2px;
+  transform: translateY(2px);
 }
