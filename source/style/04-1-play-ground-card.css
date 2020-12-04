@@ -16,6 +16,11 @@
     box-shadow .5s;
 }
 
+.play-ground__flip-card-wrapper_flipped {
+  box-shadow: var(--card-shadow);
+  transform: rotateY(-180deg);
+}
+
 .play-ground__card-frontside,
 .play-ground__card-backside {
   -webkit-backface-visibility: hidden;
@@ -36,7 +41,8 @@
 
 .play-ground__card-backside {
   box-shadow: var(--card-shadow);
-  transform: rotateY(180deg);
+  transform: translateY(-1.5em) rotateY(180deg);
+  transition: box-shadow .5s;
 }
 
 .play-ground__card-backside_bug {
@@ -54,9 +60,4 @@
 .play-ground__card-frontside:hover {
   box-shadow: var(--card-shadow);
   transform: rotate(-3deg);
-}
-
-.play-ground__flip-card-wrapper:active {
-  box-shadow: var(--card-shadow);
-  transform: rotateY(-180deg);
 }
