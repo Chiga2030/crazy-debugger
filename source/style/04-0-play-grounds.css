@@ -2,7 +2,6 @@
 .play-ground_normal,
 .play-ground_hard {
   transition: opacity .2s;
-  display: none;
 }
 
 .play-ground_easy {

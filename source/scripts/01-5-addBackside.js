@@ -7,9 +7,5 @@ function addBackside(event){
   if (curentEl === 'play-ground__card-frontside') {
     nextEl.classList.add(modifier);
     flipCard(parentEl, classFlip);
-    
-    // stop the game
-    parentEl.addEventListener('click', stopFlippingCards, false);
-    nextEl.addEventListener('click', restartGame.bind(null, modifier), false)
   }
 }
