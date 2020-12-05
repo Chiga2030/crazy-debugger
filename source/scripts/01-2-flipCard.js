@@ -1,3 +1,3 @@
-function flipCard(el) {
-  el.classList.add(classFlip);
+function flipCard(card, inverterClass) {
+  card.classList.add(inverterClass);
 }

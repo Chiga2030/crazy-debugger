@@ -1,3 +1,3 @@
-function searchEl(el) {
-  return document.querySelector(el);
+function searchEl(selector) {
+  return document.querySelector(selector);
 }

@@ -1,20 +1,19 @@
+.play-ground_easy,
+.play-ground_normal,
+.play-ground_hard {
+  transition: opacity .2s;
+  display: none;
+}
+
 .play-ground_easy {
   align-items: center;
   justify-content: center;
   position: relative;
-
-  /*display: none;*/
 }
 
 .play-ground_normal {
   flex-wrap: wrap;
   justify-content: center;
-
-  display: none;
-}
-
-.play-ground_hard {
-  display: none;
 }
 
 .play-ground__wrapper-line {
