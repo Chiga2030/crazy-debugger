@@ -17,8 +17,15 @@
 }
 
 .play-ground__flip-card-wrapper_flipped {
-  box-shadow: var(--card-shadow);
   transform: rotateY(-180deg);
+}
+
+.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
+  box-shadow: 8px 8px 8px #0000007f;
+}
+
+.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
+  box-shadow: var(--card-shadow);
 }
 
 .play-ground__card-frontside,
@@ -40,8 +47,8 @@
 }
 
 .play-ground__card-backside {
-  box-shadow: var(--card-shadow);
-  transform: translateY(-1.5em) rotateY(180deg);
+  /*box-shadow: var(--card-shadow);*/
+  transform: translateY(-.5em) rotateY(180deg);
   transition: box-shadow .5s;
 }
 
