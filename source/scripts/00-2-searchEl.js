@@ -1,3 +1,3 @@
-const searchEl = function (selector) {
+const searchEl = selector => {
   return document.querySelector(selector);
 };

@@ -6,7 +6,7 @@
 * И в конце делаем видимым слой с вобором сложности игры.
 */
 
-const restartGame = function () {
+const restartGame = () => {
   event.target.parentElement.classList.remove(classFlip);
   setTimeout(() => {
     workSpace.firstElementChild.classList.add('to-opacity');
