@@ -1,0 +1,43 @@
+.select-level__start-button {
+  background: #d62b2e;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 3px #0000007f;
+  color: #fff;
+  display: block;
+  font: normal normal 700 2em "roboto", sans-serif;
+  height: 3em;
+  outline: none;
+  transition: text-shadow .2s, transition .2s;
+  width: 11em;
+}
+
+.select-level__start-button:hover {
+  box-shadow: 0 4px 3px #0000007f;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.select-level__start-button:active {
+  box-shadow: none;
+  position: relative;
+  transform: translateY(2px);
+}
+
+@media (max-width: 1024px) {
+  .select-level__start-button {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-level__start-button {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 425px) {
+  .select-level__start-button {
+    margin-bottom: 4em;
+  }
+}

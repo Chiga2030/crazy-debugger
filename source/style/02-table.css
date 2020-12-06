@@ -1,0 +1,8 @@
+.body {
+  align-items: center;
+  background: repeat center/cover url('../img/background.jpg');
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}

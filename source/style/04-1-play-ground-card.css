@@ -1,0 +1,75 @@
+.play-ground__flip-card {
+  height: var(--card-height);
+  margin: 1.5em;
+  perspective: 1000px;
+  transition:
+    transform .5s,
+    box-shadow .5s;
+  width: var(--card-width);
+}
+
+.play-ground__flip-card-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition:
+    transform .5s,
+    box-shadow .5s;
+}
+
+.play-ground__flip-card-wrapper_flipped {
+  transform: rotateY(-180deg);
+}
+
+.play-ground__card-frontside,
+.play-ground__card-backside {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  height: var(--card-height);
+  position: absolute;
+  width: var(--card-width);
+}
+
+.play-ground__card-frontside {
+  background: no-repeat center/contain url(../img/card-cover.jpg);
+  transition:
+    transform .5s .5s,
+    box-shadow .5s;
+}
+
+.play-ground__card-backside {
+  transform: translateY(-.5em) rotateY(180deg);
+  transition: box-shadow .5s;
+}
+
+.play-ground__card-backside_bug {
+  background: no-repeat center/contain url(../img/card-cover-backside-bug.jpg);
+}
+
+.play-ground__card-backside_game-over {
+  background: no-repeat center/contain url(../img/card-cover-backside-game-over.jpg);
+}
+
+.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
+  box-shadow: 8px 8px 8px #0000007f;
+}
+
+.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
+  box-shadow: var(--card-shadow);
+}
+
+.play-ground__flip-card:hover {
+  transform: translate(-.5em, -1.5em);
+}
+
+.play-ground__card-frontside:hover {
+  box-shadow: var(--card-shadow);
+  transform: rotate(-3deg);
+}
+
+@media (max-width: 425px) {
+  .play-ground__flip-card {
+    margin: 2.2em;
+  }
+}

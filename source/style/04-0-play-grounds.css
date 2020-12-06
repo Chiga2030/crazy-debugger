@@ -1,0 +1,33 @@
+.play-ground_easy,
+.play-ground_normal,
+.play-ground_hard {
+  transition: opacity .2s;
+}
+
+.play-ground_easy {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.play-ground_normal {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.play-ground__wrapper-line {
+  display: flex;
+}
+
+@media (max-width: 425px) {
+  .play-ground__wrapper-line {
+    flex-direction: column;
+  }
+
+  .play-ground_easy,
+  .play-ground_normal,
+  .play-ground_hard {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}

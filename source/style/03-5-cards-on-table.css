@@ -1,0 +1,106 @@
+.cards-on-table {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.cards-on-table__card {
+  border-radius: 8px;
+  bottom: 0;
+  height: var(--card-height);
+  position: absolute;
+  right: 18.75em;
+  width: var(--card-width);
+}
+
+.cards-on-table__card_left {
+  animation: slide-left-card .8s ease-out forwards;
+  transform: rotate(12deg);
+}
+
+.cards-on-table__card_right {
+  animation: slide-right-card 1s ease-out forwards;
+  transform: rotate(40deg);
+}
+
+@keyframes slide-left-card {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: translateY(-4em) rotate(12deg);
+  }
+}
+
+@keyframes slide-right-card {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: translate(9em, -2em) rotate(40deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards-on-table__card {
+    right: 10em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-on-table__card {
+    --card-height: calc(21.3125em * .8);
+    --card-width: calc(13.625em * .8);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-on-table__card {
+    --card-height: calc(21.3125em * .7);
+    --card-width: calc(13.625em * .7);
+
+    right: 12em;
+  }
+
+  @keyframes slide-right-card {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: translate(5em, -2em) rotate(40deg);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .cards-on-table__card {
+    --card-height: calc(21.3125em * .4);
+    --card-width: calc(13.625em * .4);
+  }
+
+  @keyframes slide-right-card {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: translate(2em, -2em) rotate(40deg);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .cards-on-table {
+    display: block;
+    margin: 0 auto;
+    position: unset;
+  }
+
+  .cards-on-table__card {
+    bottom: unset;
+    right: unset;
+  }
+}

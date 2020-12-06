@@ -1,0 +1,47 @@
+.select-level__subtitle {
+  font: normal normal 400 1.18em "roboto", sans-serif;
+}
+
+.select-level__subtitle_bold {
+  font-weight: 700;
+}
+
+@media (max-width: 1026px) {
+  .select-level__subtitle {
+    font-size: 1.16em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .select-level__subtitle {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-level__subtitle {
+    font-size: .85em;
+  }
+}
+
+@media (max-width: 425px) {
+  .select-level__subtitle {
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  .select-level__subtitle_bold {
+    display: block;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .select-level__subtitle {
+    font-size: .8em;
+  }
+
+  .select-level__subtitle_bold {
+    font-size: 1.3em;
+  }
+}
