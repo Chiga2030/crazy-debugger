@@ -1,6 +1,6 @@
 /**
-* В зависимсти от выбранной сложности, функция будет возврщать 
-* определенную разметку игрового поля с нужным 
+* В зависимсти от выбранной сложности, функция будет возврщать
+* определенную разметку игрового поля с нужным
 * количеством игральных карт.
 */
 
@@ -15,7 +15,7 @@ const layerGenerator = function(layer) {
   `;
 
   switch(layer) {
-    case('easy'):
+    case ('easy'):
     return `
       <section class="play-ground_${layer}">
         <div class="play-ground__wrapper-line">
@@ -27,42 +27,42 @@ const layerGenerator = function(layer) {
     `;
     break;
 
-    case('normal'):
-      return `
-        <section class="play-ground_${layer}">
-          <div class="play-ground__wrapper-line">
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-          </div>
-          <div class="play-ground__wrapper-line">
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-          </div>
-        </section>
-      `;
-      break;
+    case ('normal'):
+    return `
+      <section class="play-ground_${layer}">
+        <div class="play-ground__wrapper-line">
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+        </div>
+        <div class="play-ground__wrapper-line">
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+        </div>
+      </section>
+    `;
+    break;
 
-    case('hard'):
-      return `
-        <section class="play-ground_${layer}">
-          <div class="play-ground__wrapper-line">
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-          </div>
-          <div class="play-ground__wrapper-line">
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-            ${cardHtml}
-          </div>
-        </section>
-      `;
-      break;
+    case ('hard'):
+    return `
+      <section class="play-ground_${layer}">
+        <div class="play-ground__wrapper-line">
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+        </div>
+        <div class="play-ground__wrapper-line">
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+          ${cardHtml}
+        </div>
+      </section>
+    `;
+    break;
   }
 }
