@@ -20,14 +20,6 @@
   transform: rotateY(-180deg);
 }
 
-.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
-  box-shadow: 8px 8px 8px #0000007f;
-}
-
-.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
-  box-shadow: var(--card-shadow);
-}
-
 .play-ground__card-frontside,
 .play-ground__card-backside {
   -webkit-backface-visibility: hidden;
@@ -37,6 +29,14 @@
   height: var(--card-height);
   position: absolute;
   width: var(--card-width);
+}
+
+.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
+  box-shadow: 8px 8px 8px #0000007f;
+}
+
+.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
+  box-shadow: var(--card-shadow);
 }
 
 .play-ground__card-frontside {

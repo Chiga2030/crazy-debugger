@@ -14,8 +14,8 @@ const layerGenerator = function (layer) {
     </div>
   `;
 
-  switch(layer) {
-    case ('easy'):
+  switch (layer) {
+  case ('easy'):
     return `
       <section class="play-ground_${layer}">
         <div class="play-ground__wrapper-line">
@@ -27,7 +27,7 @@ const layerGenerator = function (layer) {
     `;
     break;
 
-    case ('normal'):
+  case ('normal'):
     return `
       <section class="play-ground_${layer}">
         <div class="play-ground__wrapper-line">
@@ -44,8 +44,8 @@ const layerGenerator = function (layer) {
     `;
     break;
 
-    case ('hard'):
-    return `
+  case ('hard'):
+    returnn `
       <section class="play-ground_${layer}">
         <div class="play-ground__wrapper-line">
           ${cardHtml}
@@ -65,4 +65,4 @@ const layerGenerator = function (layer) {
     `;
     break;
   }
-}
+};

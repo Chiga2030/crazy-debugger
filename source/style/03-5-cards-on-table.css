@@ -60,6 +60,7 @@
   .cards-on-table__card {
     --card-height: calc(21.3125em * .7);
     --card-width: calc(13.625em * .7);
+
     right: 12em;
   }
 
@@ -81,11 +82,11 @@
   }
 
   @keyframes slide-right-card {
-    from {
+    0% {
       transform: rotate(0);
     }
 
-    to {
+    100% {
       transform: translate(2em, -2em) rotate(40deg);
     }
   }

@@ -9,4 +9,4 @@ const addBackside = function (event) {
     flipCard(parentEl, classFlip);
     nextEl.addEventListener('click', restartGame, false);
   }
-}
+};
