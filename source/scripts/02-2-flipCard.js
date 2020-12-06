@@ -4,7 +4,7 @@
 * если так, то переворачиваем выбранную (добавляя тот самый класс).
 */
 
-function flipCard(card, inverterClass) {
+const flipCard = function(card, inverterClass) {
   if (!searchEl(`.${inverterClass}`)) {
     card.classList.add(inverterClass);
   }

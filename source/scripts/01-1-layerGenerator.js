@@ -4,7 +4,7 @@
 * количеством игральных карт.
 */
 
-function layerGenerator(layer) {
+const layerGenerator = function(layer) {
   const cardHtml = `
     <div class="play-ground__flip-card">
       <div class="play-ground__flip-card-wrapper">
