@@ -67,3 +67,9 @@
   box-shadow: var(--card-shadow);
   transform: rotate(-3deg);
 }
+
+@media (max-width: 425px) {
+  .play-ground__flip-card {
+    margin: 2.2em;
+  }
+}

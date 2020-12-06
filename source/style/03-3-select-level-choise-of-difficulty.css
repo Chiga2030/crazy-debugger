@@ -45,3 +45,29 @@
     transform: rotateY(180deg);
   }
 }
+
+@media (max-width: 1024px) {
+  .choise-of-difficulty__select {
+    font-size: 2.8em;
+  }
+}
+
+@media (max-width: 768px) {
+   .select-level__choise-of-difficulty {
+    margin-bottom: 4em;
+  }
+  
+  .choise-of-difficulty__select {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .choise-of-difficulty__select {
+    font-size: 1.5em;
+  }
+
+  .select-level__choise-of-difficulty {
+    margin-bottom: 2em;
+  }
+}

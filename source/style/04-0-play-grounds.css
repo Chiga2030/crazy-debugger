@@ -18,3 +18,17 @@
 .play-ground__wrapper-line {
   display: flex;
 }
+
+@media (max-width: 425px) {
+  .play-ground__wrapper-line {
+    flex-direction: column;
+  }
+
+  .play-ground_easy,
+  .play-ground_normal,
+  .play-ground_hard {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+}

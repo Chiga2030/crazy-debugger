@@ -1,5 +1,4 @@
 .select-level__start-button {
-  transition: text-shadow .2s, transition .2s;
   background: #d62b2e;
   border-radius: 8px;
   border: none;
@@ -9,6 +8,7 @@
   font: normal normal 700 2em "roboto", sans-serif;
   height: 3em;
   outline: none;
+  transition: text-shadow .2s, transition .2s;
   width: 11em;
 }
 
@@ -22,4 +22,22 @@
   box-shadow: none;
   position: relative;
   transform: translateY(2px);
+}
+
+@media (max-width: 1024px) {
+  .select-level__start-button {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-level__start-button {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 425px) {
+  .select-level__start-button {
+    margin-bottom: 4em;
+  }
 }

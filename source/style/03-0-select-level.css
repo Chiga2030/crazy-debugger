@@ -8,3 +8,18 @@
 .select-level__header {
   margin-bottom: 3.75em;
 }
+
+@media (max-width: 425px) {
+  .select-level {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    width: 95vw;
+  }
+
+  .select-level__header {
+    margin-bottom: 0.75em;
+  }
+}

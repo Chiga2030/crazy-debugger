@@ -4,3 +4,43 @@
   --card-width: 13.625em;
   --shadow-hover: #474747 3px 1px 2px;
 }
+
+@media (max-width: 1200px) {
+  .play-ground_normal {
+    --card-height: calc(21.3125em * .9);
+    --card-width: calc(13.625em * .9);
+  }
+
+  .play-ground_hard {
+    --card-height: calc(21.3125em * .8);
+    --card-width: calc(13.625em * .8);
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --card-height: calc(21.3125em * .8);
+    --card-width: calc(13.625em * .8);
+  }
+
+  .play-ground_hard {
+    --card-height: calc(21.3125em * .7);
+    --card-width: calc(13.625em * .7);
+  }
+}
+
+@media (max-width: 768px) {
+  .play-ground_hard {
+    --card-height: calc(21.3125em * .5);
+    --card-width: calc(13.625em * .5);
+  }
+}
+
+@media (max-width: 425px) {
+  .play-ground_easy,
+  .play-ground_normal,
+  .play-ground_hard {
+    --card-height: calc(21.3125em * .8);
+    --card-width: calc(13.625em * .8);
+  }
+}
