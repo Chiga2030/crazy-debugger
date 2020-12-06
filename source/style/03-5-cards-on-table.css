@@ -82,11 +82,11 @@
   }
 
   @keyframes slide-right-card {
-    0% {
+    from {
       transform: rotate(0);
     }
 
-    100% {
+    to {
       transform: translate(2em, -2em) rotate(40deg);
     }
   }

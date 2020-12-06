@@ -8,8 +8,16 @@
 
 const restartGame = function () {
   event.target.parentElement.classList.remove(classFlip);
-  setTimeout(() => workSpace.firstElementChild.classList.add('to-opacity'), 500 );
-  setTimeout(() => workSpace.firstElementChild.remove(), 700 );
-  setTimeout(() => startLayer.classList.remove('hidden-layer'), 700);
-  setTimeout(() => startLayer.classList.remove('to-opacity'), 700);
+  setTimeout(() => {
+    workSpace.firstElementChild.classList.add('to-opacity')
+  }, 500);
+  setTimeout(() => {
+    workSpace.firstElementChild.remove()
+  }, 700);
+  setTimeout(() => {
+    startLayer.classList.remove('hidden-layer')
+  }, 700);
+  setTimeout(() => {
+    startLayer.classList.remove('to-opacity')
+  }, 700);
 };
