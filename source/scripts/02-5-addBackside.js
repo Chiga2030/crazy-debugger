@@ -1,4 +1,4 @@
-const addBackside = function(event) {
+const addBackside = function (event) {
   const curentEl = event.target.classList.value;
   const nextEl = event.target.nextElementSibling;
   const parentEl = event.toElement.parentElement;

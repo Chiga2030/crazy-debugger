@@ -1,4 +1,4 @@
-const bugGenerator = function() {
+const bugGenerator = function () {
   const random = Math.round( Math.random() );
 
   if (random) {

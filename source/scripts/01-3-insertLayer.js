@@ -1,4 +1,4 @@
-const insertLayer = function() {
+const insertLayer = function () {
   const layer = hardSelectForm.select.value;
   
   startLayer.classList.add('to-opacity');
