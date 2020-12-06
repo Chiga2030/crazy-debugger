@@ -1,3 +1,7 @@
+.to-opacity {
+  opacity: 0;
+}
+
 .hidden-layer {
   display: none;
 }

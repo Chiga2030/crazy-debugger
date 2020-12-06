@@ -1,2 +1,2 @@
-document.body.addEventListener('mousedown', addBackside, false);
-// playGameButton.addEventListener('click', startGame.bind(null, hardSelectForm), false);
+workSpace.addEventListener('mousedown', addBackside, false);
+playGameButton.addEventListener('click', insertLayer, false);

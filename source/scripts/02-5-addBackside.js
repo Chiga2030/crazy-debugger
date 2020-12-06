@@ -7,5 +7,6 @@ function addBackside(event){
   if (curentEl === 'play-ground__card-frontside') {
     nextEl.classList.add(modifier);
     flipCard(parentEl, classFlip);
+    nextEl.addEventListener('click', restartGame, false);
   }
 }

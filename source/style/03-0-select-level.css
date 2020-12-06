@@ -1,6 +1,7 @@
 .select-level {
   height: 80vh;
   position: relative;
+  transition: opacity .2s;
   width: 80vw;
 }
 
