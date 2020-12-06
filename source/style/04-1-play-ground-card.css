@@ -31,14 +31,6 @@
   width: var(--card-width);
 }
 
-.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
-  box-shadow: 8px 8px 8px #0000007f;
-}
-
-.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
-  box-shadow: var(--card-shadow);
-}
-
 .play-ground__card-frontside {
   background: no-repeat center/contain url(../img/card-cover.jpg);
   transition:
@@ -57,6 +49,14 @@
 
 .play-ground__card-backside_game-over {
   background: no-repeat center/contain url(../img/card-cover-backside-game-over.jpg);
+}
+
+.play-ground__flip-card-wrapper_flipped:not(:hover) .play-ground__card-backside {
+  box-shadow: 8px 8px 8px #0000007f;
+}
+
+.play-ground__flip-card-wrapper_flipped:hover .play-ground__card-backside {
+  box-shadow: var(--card-shadow);
 }
 
 .play-ground__flip-card:hover {
