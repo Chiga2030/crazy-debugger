@@ -47,7 +47,6 @@
 }
 
 .play-ground__card-backside {
-  /*box-shadow: var(--card-shadow);*/
   transform: translateY(-.5em) rotateY(180deg);
   transition: box-shadow .5s;
 }
