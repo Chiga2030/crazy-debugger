@@ -45,7 +45,7 @@ const layerGenerator = function (layer) {
     break;
 
   case ('hard'):
-    returnn `
+    return `
       <section class="play-ground_${layer}">
         <div class="play-ground__wrapper-line">
           ${cardHtml}
