@@ -17,7 +17,7 @@ const layerGenerator = layer => {
   switch (layer) {
   case ('easy'):
     return `
-      <section class="play-ground_${layer}">
+      <section class="play-ground_${layer}" data-dificult="${layer}">
         <div class="play-ground__wrapper-line">
           ${cardHtml}
           ${cardHtml}
@@ -29,7 +29,7 @@ const layerGenerator = layer => {
 
   case ('normal'):
     return `
-      <section class="play-ground_${layer}">
+      <section class="play-ground_${layer}" data-dificult="${layer}">
         <div class="play-ground__wrapper-line">
           ${cardHtml}
           ${cardHtml}
@@ -46,7 +46,7 @@ const layerGenerator = layer => {
 
   case ('hard'):
     return `
-      <section class="play-ground_${layer}">
+      <section class="play-ground_${layer}" data-dificult="${layer}">
         <div class="play-ground__wrapper-line">
           ${cardHtml}
           ${cardHtml}
