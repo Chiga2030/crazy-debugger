@@ -6,16 +6,23 @@
 */
 
 const bugGenerator = () => {
-  // const random = Math.round(Math.random());
+  let random;
   const hardLevel = workSpace.firstElementChild.dataset.dificult;
 
   switch (hardLevel) {
     case 'easy':
-    const random = Math.round( Math.random() * 2 );
+    random = Math.round(Math.random() * 2);
+    return chanceCheck(random);
+    break;
+
+    case 'normal':
+    random = Math.round(Math.random() * 5);
+    return chanceCheck(random);
+    break;
+
+    case 'hard':
+    random = Math.round(Math.random() * 9);
+    return chanceCheck(random);
     break;
   }
-
-  if (random) {
-    return 'bug';
-  } return 'game-over';
 };
