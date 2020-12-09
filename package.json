@@ -7,6 +7,7 @@
   "description": "Crazy debugger game by JavaScript",
   "main": "./build/index.html",
   "scripts": {
+    "mk-src": "mkdir -p -v ./source/template ./source/scripts ./source/style ./source/fonts ./source/img",
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
