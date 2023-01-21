@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crazy debugger game by JavaScript">
+  <title>Игра "Найди баг"</title>
+  <link rel="stylesheet" href="./style/style-min.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="icon" href="./img/favicon.svg" type="image/svg">
+</head>
+<body class="body">
+  <section class="select-level">
+  
+    <header class="select-level__header">
+      <h1 class="select-level__title">Выберите уровень сложности:</h1>
+      <p class="select-level__subtitle">
+        <span class="select-level__subtitle_bold">
+          Выберите сложность и игра начнется.
+        </span>
+        Чем выше уровень - тем больше будет выборка карт.</p>
+    </header>
+  
+    <form class="select-level__choise-of-difficulty choise-of-difficulty">
+      <label class="choise-of-difficulty__select">
+        <input checked hidden class="choise-of-difficulty__radio" type="radio" name="select" value="easy">
+        <span class="choise-of-difficulty__description">
+          Простой
+        </span>
+      </label>
+      <label class="choise-of-difficulty__select">
+        <input hidden class="choise-of-difficulty__radio" type="radio" name="select" value="normal">
+        <span class="choise-of-difficulty__description">
+          Средний
+        </span>
+      </label>
+      <label class="choise-of-difficulty__select">
+        <input hidden class="choise-of-difficulty__radio" type="radio" name="select" value="hard">
+        <span class="choise-of-difficulty__description">
+          Сложный
+        </span>
+      </label>
+    </form>
+  
+    <button class="select-level__start-button" type="button">
+      Начать игру
+    </button>
+  
+    <div class="select-level__cards-on-table cards-on-table">
+      <img class="cards-on-table__card cards-on-table__card_left" src="../img/card-cover.jpg" alt="playing card">
+      <img class="cards-on-table__card cards-on-table__card_right" src="../img/card-cover.jpg" alt="playing card">
+    </div>
+  
+  </section>
+  <div class="layer-wrapper"></div>
+  <script src="./js/scripts-min.js"></script>
+</body>
+</html>
