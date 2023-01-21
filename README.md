@@ -10,8 +10,10 @@ https://chiga2030.github.io/crazy-debugger/
 
 ## Запустить
 ```
+nvm i v8
+npm install --global gulp-cli
 npm i
-gulp
+npx gulp
 ```
 
 ## О пректе
