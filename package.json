@@ -9,6 +9,7 @@
   "scripts": {
     "mk-src": "mkdir -p -v ./source/template ./source/scripts ./source/style ./source/fonts ./source/img",
     "build": "gulp build",
+    "deploy": "gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
