@@ -6,7 +6,7 @@ Crazy debugger game by JavaScript.
 Игра которая поможет Вам проверить интуицию, переворачивайте карты и находите баги.
 
 ## Посмотреть
-https://crazy-debugger.taa-dev.pro/
+https://chiga2030.github.io/crazy-debugger/
 
 ## Запустить
 ```
