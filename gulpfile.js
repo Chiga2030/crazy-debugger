@@ -63,19 +63,19 @@ gulp.task('build-styles', () => {
 
 /* сборка шрифтов */
 gulp.task('build-fonts', () => {
-  gulp.src(`${path.src.fonts}*.ttf`)
+  gulp.src(`${ path.src.fonts }*.ttf`)
     .pipe(ttf2woff())
     .pipe(gulp.dest(path.src.fonts));
-  return gulp.src(`${path.src.fonts}*.ttf`)
+  return gulp.src(`${ path.src.fonts }*.ttf`)
     .pipe(ttf2woff2())
     .pipe(gulp.dest(path.src.fonts));
 });
 
 gulp.task('copy-fonts', () => {
-  gulp.src(`${path.src.fonts}*.*[^".css"]`)
+  gulp.src(`${ path.src.fonts }*.*[^".css"]`)
     .pipe(gulp.dest(path.build.fonts));
 
-  gulp.src(`${path.src.fonts}*.css`)
+  gulp.src(`${ path.src.fonts }*.css`)
     .pipe(gulpif(process.env.SOURCEMAPS === 'switch-on', sourcemaps.init()))
     .pipe(autoprefixer({
       cascade: false,
@@ -113,26 +113,26 @@ gulp.task('build-images', () => {
 
 gulp.task(
   'default', [
-    'build-fonts',
-    'copy-fonts',
-    'build-html',
-    'build-styles',
-    'build-scripts',
-    'build-images',
-    'browser-sync',
-  ]);
+  'build-fonts',
+  'copy-fonts',
+  'build-html',
+  'build-styles',
+  'build-scripts',
+  'build-images',
+  'browser-sync',
+]);
 
 // build for prod
 gulp.task(
   'build', [
-    'clean',
-    'build-fonts',
-    'copy-fonts',
-    'build-html',
-    'build-styles',
-    'build-scripts',
-    'build-images',
-  ]);
+  'clean',
+  'build-fonts',
+  'copy-fonts',
+  'build-html',
+  'build-styles',
+  'build-scripts',
+  'build-images',
+]);
 
 gulp.task('browser-sync', () => {
   browserSync.init({
