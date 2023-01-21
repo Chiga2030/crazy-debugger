@@ -32,6 +32,9 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const imagemin = require('gulp-imagemin');  // compress images
 const autoprefixer = require('gulp-autoprefixer');
+const ghPages = require('gh-pages');
+const nodePath = require('path');
+
 
 env({
   file: '.env',
@@ -174,3 +177,8 @@ gulp.task('watch-scripts', [
 gulp.task('watch-images', [
   'build-images',
 ], () => browserSync.reload());
+
+gulp.task('deploy', function deploy (cb) {
+  ghPages.publish(nodePath.join(process.cwd(), './build'), cb);
+  exports.deploy = deploy;
+});
